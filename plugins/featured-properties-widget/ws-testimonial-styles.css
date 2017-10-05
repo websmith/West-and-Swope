@@ -1,0 +1,14 @@
+.testimonial-widget {
+	color: black;
+	border: 0 none;
+	text-align: center;
+}
+
+.testimonial-widget blockquote {
+	border: 0 none;
+}
+
+.testimonial-widget.light_text * {
+	color: white;
+	text-shadow: 0 0 14px #000;
+}

@@ -1,0 +1,626 @@
+/*
+
+Theme Name: X &ndash; Child Theme
+Theme URI: http://theme.co/x/
+Author: Themeco
+Author URI: http://theme.co/
+Description: Make all of your modifications to X in this child theme.
+Version: 1.0.0
+Template: x
+
+colors:
+dk green: 	#43524A
+med green: 	#60745C
+red: 		#8C2C1E
+orange: 	#863E1D
+blue: 		#ACC9CB
+*/
+
+@font-face {
+	font-family: 'Trajan Pro';
+	src: url('framework/fonts/TrajanPro-Regular.eot');
+	src: url('framework/fonts/TrajanPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('framework/fonts/TrajanPro-Regular.woff') format('woff'),
+		url('framework/fonts/TrajanPro-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Book';
+	src: url('framework/fonts/GothamBook.eot');
+	src: url('framework/fonts/GothamBook.eot?#iefix') format('embedded-opentype'),
+		url('framework/fonts/GothamBook.woff') format('woff'),
+		url('framework/fonts/GothamBook.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Custom Fonts */
+body {
+	font-family: 'Gotham Book' !important;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Trajan Pro' !important;
+}
+
+/* Navbar */
+.x-navbar .x-nav-wrap .x-nav > li > a {
+	font-family: 'Gotham Book' !important;
+}
+
+.x-navbar .desktop .x-nav>li:first-child>a {
+	border-left: 0 none;
+}
+
+.x-navbar .desktop .x-nav>li>a {
+	border-right: 0 none;
+}
+
+/* Listings */
+.featured-properties-slider-title {
+	font-family: 'Trajan Pro' !important;
+}
+/*
+.properties-current-listings {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+*/
+.properties-current-listings .properties {
+    width: 30.3%;
+    margin: 1.5%;
+	float: left;
+	min-height: 470px;
+}
+
+.property-badge {
+    position: absolute;
+	z-index: 1;
+    top: 16px;
+    left: 0;
+    padding: 3px 20px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    background-color: rgba(20,70,160,.8);
+    color: white;
+}
+
+.property-meta .property-badge {
+	position: static;
+	border-radius: 4px;
+	font-size: 12px;
+}
+
+.property-badge.listing-type-active {
+    display: none;
+}
+
+.property-badge.listing-type-featured {
+    background-color: rgba(80,190,80,.8);
+}
+
+.property-badge.listing-type-reduced {
+    background-color: rgba(180,90,80,.8);
+}
+
+.properties-current-listings .property-thumb {
+	max-width: 100%;
+	width: auto;
+	position: relative;
+}
+
+.property-thumb {
+	-webkit-transition: .2s opacity linear;
+	-moz-transition: .2s opacity linear;
+	-o-transition: .2s opacity linear;
+	transition: .2s opacity linear;
+}
+
+.property-thumb:hover {
+    opacity: .8;
+}
+
+.property-thumb-image {
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+	background-position: center center;
+    background-size: cover;
+}
+
+.properties-current-listings .property-meta {
+	background: #e8e8e8;
+	padding: 20px;
+	position: relative;
+}
+
+.properties-current-listings .post-title {
+    font-size: 17px;
+	margin: 0 0 10px;
+}
+
+.properties-current-listings .property-acreage,
+.properties-current-listings .property-price {
+	font-size: 16px;
+	margin: 0px;
+}
+
+.properties-current-listings .property-price {
+    margin: 12px 0 0;
+}
+
+.properties-current-listings .property-price:before {
+	content: "\f155";
+	font-family: 'fontawesome', FontAwesome;
+	color: #3e2514;
+	font-size: 18px;
+	padding-right: 3px;
+	width: 26px;
+	display: inline-block;
+	padding-left: 3px;
+}
+
+.properties-current-listings .property-region {
+	color: #888;
+	font-size: 13px;
+	font-weight: 300;
+	margin-bottom: 5px;
+}
+
+.properties-current-listings .property-region:before {
+	content: "\f041";
+	font-family: 'fontawesome', FontAwesome;
+	padding-right: 10px;
+	padding-left: 1px;
+	font-size: 27px;
+	position: relative;
+	top: 4px;
+}
+
+.properties-current-listings .property-acreage:before {
+	content: "";
+	display: inline-block;
+	background: url("/wp-content/uploads/2016/09/WestSwope_windmillalt_black.png") no-repeat -16px 10px;
+	background-size: 49px;
+	width: 19px;
+	height: 43px;
+	margin-right: 7px;
+	position: relative;
+	top: 7px;
+}
+
+
+/* Single Property */
+.property-main-image {
+	background-repeat: no-repeat;
+	background-color: #3e2514;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 585px;
+	position: relative;
+}
+
+.property-name {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    color: white;
+    background: rgba(140,44,30,.6);
+    margin: 0;
+    padding: 20px;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.property-listing-type {
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.property-listing-type.listing-active {
+	display: none;
+}
+
+.property-listing-type.listing-featured {
+	background-color: rgba(80,190,80,.8);
+	border-color: rgba(80,190,80,1);
+	padding: 7px 14px;
+}
+
+.property-listing-type.listing-reduced {
+	background-color: rgba(180,90,80,.8);
+	border-color: rgba(180,90,80,1);
+	padding: 7px 14px;
+}
+
+.property-listing-type.listing-active {
+	background-color: rgba(20,70,160,.8);
+	border-color: rgba(20,70,160,1);
+	padding: 7px 14px;
+}
+
+.property-listing-type.listing-sold {
+	background-color: rgba(50,50,50,.8);
+	border-color: rgba(50,50,50,1);
+	padding: 7px 14px;
+}
+
+.property-details .property-listing-type {
+    margin: 0;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.property-details {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 7px 0;
+    text-align: center;
+}
+
+.property-details-value {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.property-sidebar {
+    background-color: #e8e8e8;
+    padding: 30px;
+	margin-top: 20px;
+}
+
+.property-sidebar:first-child {
+	margin-top: 40px;
+}
+
+.property-label {
+    font-size: 28px;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+}
+
+.property-sidebar-value {
+	margin-top: 0;
+    color: #645e5e;
+    font-size: 19px;
+    letter-spacing: 0;
+	margin: 5px;
+}
+
+.tags-list {
+    list-style: none;
+    margin: 0;
+}
+
+.tag-pill {
+    display: inline-block;
+    background-color: #976749;
+    padding: 3px 15px;
+    border-radius: 6px;
+    border: 2px solid #3e2514;
+    margin-right: 4px;
+    color: white;
+}
+
+.property-details .property-price:before {
+	content: "\f155";
+	font-family: 'fontawesome', FontAwesome;
+	color: #3e2514;
+	font-size: 18px;
+	padding-right: 5px;
+	width: 30px;
+	display: inline-block;
+	padding-left: 3px;
+}
+
+.property-details .property-acreage:before {
+	content: "";
+	display: inline-block;
+	background: url("/wp-content/uploads/2016/09/WestSwope_windmillalt_black.png") no-repeat -16px 10px;
+	background-size: 49px;
+	width: 19px;
+	height: 43px;
+	margin-right: 7px;
+	position: relative;
+	top: 7px;
+}
+
+.property-details .property-region:before {
+	content: "\f041";
+	font-family: 'fontawesome', FontAwesome;
+	color: #3e2514;
+	font-size: 18px;
+	padding-right: 5px;
+	width: 30px;
+	display: inline-block;
+	padding-left: 3px;
+}
+
+.property-details .property-taxes:before {
+	content: "\f19c";
+	font-family: 'fontawesome', FontAwesome;
+	color: #3e2514;
+	font-size: 16px;
+	padding-right: 5px;
+	width: 30px;
+	display: inline-block;
+}
+
+.property-button {
+	margin: 12px 0;
+}
+
+.property-sidebar .property-label {
+	font-size: 21px;
+	margin: 0 0 20px;
+}
+
+.property-sidebar .property-label:last-child {
+	margin-bottom: 0;
+}
+
+.social-share {
+    list-style: none;
+    margin: 0;
+}
+
+.social-share li {
+    display: inline-block;
+    padding: 6px 12px;
+	line-height: 1;
+}
+
+.social-share li a {
+	font-family: 'fontawesome', FontAwesome;
+	font-size: 32px;
+}
+
+.social-share li a:hover {
+	cursor: pointer;
+}
+
+.social-share li.facebook a:before {
+	content: "\f09a";
+}
+
+.social-share li.twitter a:before {
+	content: "\f099";
+}
+
+.social-share li.gplus a:before {
+	content: "\f0d5";
+}
+
+.social-share li.email a:before {
+	content: "\f0e0";
+}
+
+ul.property-gallery {
+    list-style: none;
+    margin: 0;
+}
+
+.property-gallery-image {
+    float: left;
+    width: 25%;
+    padding: 1.5%;
+}
+
+.property-gallery-image img {
+	width: 100%;
+	height: 140px;
+}
+
+.embed-container { 
+	position: relative; 
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+} 
+
+.embed-container iframe,
+.mapright iframe { 
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.mapright { 
+	position: relative; 
+	padding-bottom: 480px;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+}
+
+/* testimonials */
+.testimonial blockquote {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	border-left: 4px solid #ccc;
+	padding: 25px;
+}
+
+.testimonial-quote {
+	font-size: 14px;
+}
+
+
+/* global */
+.x-nav-articles {
+	float: none;
+    width: auto;
+    margin-left: inherit;
+}
+
+.single-post .entry-header {
+	text-align: center;
+}
+
+.header-infobar {
+	background-color: #35423b;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.header-infobar ul {
+    margin: 0;
+    list-style: none;
+    text-align: right;
+}
+
+.header-infobar ul li {
+    display: inline-block;
+    padding: 8px 20px;
+    line-height: 1;
+	color: white;
+    font-weight: 600;
+	word-break: break-all;
+}
+
+.header-infobar a {
+	color: #ccc;
+}
+
+.header-infobar a:hover {
+	color: white;
+}
+
+.h-landmark, .h-landmark.entry-title {
+    margin: 0;
+    font-size: 143%;
+    line-height: 1.5;
+    text-align: center;
+    color: #863E1D;
+    padding-top: 9px;
+}
+
+.pb-logo {
+	display: block;
+	margin: auto;
+	width: 190px;
+	max-width: 100%;
+}
+
+img.attachment-entry-fullwidth.size-entry-fullwidth.wp-post-image {
+    margin: auto;
+    display: block;
+}
+
+.widget:before {
+	height: 0;
+	background: transparent;
+}
+
+.x-colophon.bottom .x-colophon-content {
+	margin-bottom: 0;
+}
+
+#menu-footer-menu li a {
+    padding: 7px 16px;
+    background-color: #60745C;
+    margin-bottom: 8px;
+    display: block;
+	color: #eee;
+}
+
+#menu-footer-menu li a:hover,
+#menu-footer-menu li a:focus,
+#menu-footer-menu li a:active {
+    background-color: #35423b;
+}
+
+.footer-address {
+    color: #778e72;
+    text-align: center;
+}
+
+.footer-address address {
+    margin-bottom: 0;
+    line-height: 1.4;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.footer-address address:first-child {
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-address p {
+    margin: 20px 0;
+    line-height: 1.3;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.footer-address p a {
+    text-decoration: none;
+	color: #ccc;
+    font-weight: 300;
+}
+
+.copyright {
+	text-transform: initial;
+	text-align: center;
+	margin-bottom: 0;
+	padding: 10px;
+	font-size: 14px;
+}
+
+
+@media screen and (max-width: 900px) {
+	.properties-current-listings .properties {
+		width: 47%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.property-badge {
+		padding: 5px 20px;
+		font-size: 16px;
+	}
+	
+	.property-gallery-image {
+        width: 33%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .property-gallery-image {
+        width: 50%;
+    }
+	
+	.properties-current-listings .properties {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		min-height: 0;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.property-badge {
+		padding: 3px 20px;
+		font-size: 13px;
+	}
+}
